@@ -61,7 +61,28 @@ console.log('css4'.match(str4)[0].toUpperCase());
 
 const someStr = '1 - 5';
 
-const regExp = /\d\s-\s\d/g;
+const regExp_5 = /\d\s-\s\d/g;
 
 console.log(someStr.match(regExp)[0]);
 
+let letter = 'A B C 1';
+
+const result_2 = /\p{L}/gu;
+
+console.log(letter.match(result));
+
+const someLetter = 'lL';
+
+const regExpForUnicode = /\p{L}/gu;
+console.log(someLetter.match(regExpForUnicode));
+
+let regExp = /x\p{Hex_Digit}\p{Hex_Digit}/u;
+
+console.log('x09'.match(regExp));
+
+
+const someNumber = 'xFA';
+
+const regExp_4 = /x\p{Hex_Digit}\p{Hex_Digit}/u;
+
+console.log(someNumber.match(regExp_4));
